@@ -6,7 +6,7 @@ networks:
 
 services:
   mongo:
-    build: ./mongo
+    build: ./app/mongo
     ports:
       - "27017:27017"
     volumes:
@@ -15,7 +15,7 @@ services:
       - web_network
 
   web_app:
-    build: ./web_app
+    build: ./app
     ports:
       - "5000:5000"
     depends_on:
